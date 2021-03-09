@@ -127,9 +127,9 @@ function animate() {
     var height =getHeigth(container);
     var width =container.clientWidth;
     //console.log(container.style.maxHeight);
-    camera.position.x = 60;
-    camera.position.y = 60;
-    camera.position.z = 140;
+    camera.position.x = 50;
+    camera.position.y = 40;
+    camera.position.z = -40;
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
