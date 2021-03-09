@@ -1,3 +1,4 @@
+
 let scene, camera, renderer;
 let mixer;
 
@@ -26,12 +27,15 @@ function init() {
   scene = new THREE.Scene();
   //scene.background = new THREE.Color(0xdddddd);
   
-  camera = new THREE.PerspectiveCamera(30,width/height,1,5000);
+  camera = new THREE.PerspectiveCamera(45,width/height,1,5000);
   //camera.rotation.y = 150;
-  //camera.rotation.x=300;
-  camera.position.x = 60;
-  camera.position.y = 60;
-  camera.position.z = 140;
+
+  camera.position.x = 50;
+  camera.position.y = 40;
+  camera.position.z = -40;
+ //camera.updateProjectionMatrix();
+
+
 
 
   //controls = new THREE.OrbitControls(camera);
@@ -39,8 +43,13 @@ function init() {
 
   hlight = new THREE.AmbientLight (0x404040,15);
   scene.add(hlight);
+  const pointLight =  new THREE.PointLight( 0xffffff, 1, 1000 );
+  pointLight.position.set( 10, 25, - 40 );
+  scene.add( pointLight );
 
-
+  const pointLight2 =  new THREE.PointLight( 0xffffff, 1, 1000 );
+  pointLight2.position.set( 50, 55, 50 );
+  scene.add( pointLight2 );
   //var drawingSurface = document.getElementById( 'canvas' );
 //	var renderer = new THREE.WebGLRenderer( { antialias: true, canvas: drawingSurface } );
 
@@ -55,17 +64,18 @@ function init() {
   //document.getElementById("c").appendChild(renderer.domElement);
   //document.body.appendChild(renderer.domElement);
 
-
+  container.append(renderer.domElement);
   //container.appendChild(renderer.domElement);
 
   controls = new THREE.OrbitControls(camera, container);
 
-  container.append(renderer.domElement);
+  
 
   let loader = new THREE.GLTFLoader();
-  loader.load('model/scene.gltf', function(gltf){
-    car = gltf.scene.children[0];
-    car.scale.set(0.3,0.3,0.3);
+  loader.load('model/MoonRover1.glb', function(gltf){
+    console.log(gltf.scene.children[0]);
+    rover = gltf.scene.children[0];
+    rover.scale.set(10,10,10);
     scene.add(gltf.scene);
 
     //console.log(gltf  );
@@ -97,6 +107,7 @@ function init() {
 }
 function animate() {
 
+  
   requestAnimationFrame(animate);
   if (mixer) mixer.update (clock.getDelta ());  
   renderer.render(scene,camera);
