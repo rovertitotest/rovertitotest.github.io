@@ -73,7 +73,9 @@ function init() {
 
   let loader = new THREE.GLTFLoader();
   loader.load('model/moonrover.glb', function(gltf){
+    console.log(gltf);
     console.log(gltf.scene.children[0]);
+    
     rover = gltf.scene.children[0];
     rover.scale.set(10,10,10);
     scene.add(gltf.scene);
