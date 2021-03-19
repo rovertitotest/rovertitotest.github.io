@@ -96,7 +96,7 @@ function init() {
   
 
   let loader = new THREE.GLTFLoader();
-  loader.load('model/moonrovernew.glb', function(gltf){
+  loader.load('model/Moonrovernew.glb', function(gltf){
     console.log(gltf);
    // console.log(gltf.scene.children[0]);
     
