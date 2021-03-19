@@ -25,9 +25,9 @@ function init() {
 
 
   scene = new THREE.Scene();
-  //scene.background = new THREE.Color(0xdddddd);
+  // scene.background = new THREE.Color(0x67a6fd);
   
-  camera = new THREE.PerspectiveCamera(45,width/height,1,5000);
+  camera = new THREE.PerspectiveCamera(2,width/height,1,5000);
   //camera.rotation.y = 150;
 
   camera.position.x = 50;
@@ -42,14 +42,38 @@ function init() {
   //controls.addEventListener('change', renderer);
 
   hlight = new THREE.AmbientLight (0x404040,15);
-  scene.add(hlight);
-  const pointLight =  new THREE.PointLight( 0xffffff, 1, 1000 );
-  pointLight.position.set( 10, 25, - 40 );
-  scene.add( pointLight );
+  //scene.add(hlight);
+  const pointLight =  new THREE.PointLight( 0xffffff, 2, 1000 );
+  // pointLight.position.set( 10, 25, - 40 );
+   scene.add( pointLight );
+
+  // const pointLight =  new THREE.PointLight( 0xffffff, 1, 1000 );
+  // pointLight.position.set( 30, 20, - 40 );
+  // scene.add( pointLight );
+
+  // const pointLight =  new THREE.PointLight( 0xffffff, 1, 1000 );
+  // pointLight.position.set( 110, -20, - 40 );
+  // scene.add( pointLight );
+
 
   const pointLight2 =  new THREE.PointLight( 0xffffff, 1, 1000 );
-  pointLight2.position.set( 50, 55, 50 );
+  pointLight2.position.set( 0, 0, 0 );
   scene.add( pointLight2 );
+
+
+  const pointLight3 =  new THREE.PointLight( 0xffffff, 1, 1000 );
+  pointLight3.position.set( -50,-50,-50 );
+  scene.add( pointLight3 );
+
+
+  const pointLight4 =  new THREE.PointLight( 0xffffff, 1, 1000 );
+  pointLight4.position.set( 50, 50, -20 );
+  scene.add( pointLight4 );
+
+  const pointLight5 =  new THREE.PointLight( 0xffffff,1, 1000 );
+  pointLight5.position.set( 20, -20, 20 );
+  // pointLight5.position.set(-40, 10, 20 );
+  scene.add( pointLight5 );
   //var drawingSurface = document.getElementById( 'canvas' );
 //	var renderer = new THREE.WebGLRenderer( { antialias: true, canvas: drawingSurface } );
 
@@ -72,26 +96,26 @@ function init() {
   
 
   let loader = new THREE.GLTFLoader();
-  loader.load('model/moonrover.glb', function(gltf){
+  loader.load('model/moonrovernew.glb', function(gltf){
     console.log(gltf);
-    console.log(gltf.scene.children[0]);
+   // console.log(gltf.scene.children[0]);
     
-    rover = gltf.scene.children[0];
-    rover.scale.set(10,10,10);
+    rover = gltf.scene;
+    rover.scale.set(1,1,1);
     scene.add(gltf.scene);
 
     //console.log(gltf  );
     
 
-    mixer = new THREE.AnimationMixer( gltf.scene.children[0]);
+    mixer = new THREE.AnimationMixer( gltf.scene);
   
 
 
-    const clip = gltf.animations[0];
+    //const clip = gltf.animations[0];
 
-
-    const action = mixer.clipAction(clip);
-    action.play();
+    mixer.clipAction(gltf.animations[0]).play();
+    //const action = mixer.clipAction(clip);
+    //action.play();
     // var action = mixer.clipAction( gltf.animations[0]);
     // action.reset().play();
     // scene.add(gltf.scene);

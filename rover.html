@@ -152,9 +152,15 @@
 					<div class="content">
 						<header>
 							<h2>Navegation</h2>
-							<p>Fully autonomous navigation. </p>
+							<p>How does our rover manage to move and locate itself at the same time without teleoperation? </p>
 						</header>
-						<p>With Lidar it map the area, and using SLAM it determine the best way to go.  </p>
+						<p>Among the wide range of autonomous robot navigation algorithms, we are using a strategy of sensor fusion with 
+							Visual SLAM. Our system is composed of a main stereo camera and a combination of infrared and depth sensors.
+							 In this way, we can detect relevant "features" of the environment and perform a highly accurate localization 
+							 and mapping of the lunar landscape.
+
+							The correct use of SLAM together with planning algorithms will allow our Rover to make autonomous decisions and 
+							decide where it has to move, always making an inference of parameters such as obstacles, valleys and craters. </p>
 						<ul class="actions">
 						</ul>
 					</div>
