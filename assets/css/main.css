@@ -2575,13 +2575,13 @@ input, select, textarea {
 			}
 
 			.image.blog {
-				display: block;
+				display: inline-block;
 				margin: 0 0 2em 0;
-				width: 100%;
+				width: 50%;
 			}
 	
 				.image.blog img {
-					width: 50%;
+					width: 100%;
 				}
 
 			.image.log {
@@ -3004,7 +3004,7 @@ input, select, textarea {
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
-		height: 100vh;
+		height:100vh;
 		overflow: hidden;
 		position: relative;
 	}
@@ -3920,7 +3920,7 @@ input, select, textarea {
 
 					#banner .content .image {
 						height: 9em;
-						width: 9em;
+						width: 13em;
 					}
 
 		/* Nav */
