@@ -3919,7 +3919,7 @@ input, select, textarea {
 					}
 
 					#banner .content .image {
-						height: 9em;
+						/* height: 9em; */
 						width: 13em;
 					}
 
