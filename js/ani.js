@@ -41,8 +41,8 @@ function init() {
   //controls = new THREE.OrbitControls(camera);
   //controls.addEventListener('change', renderer);
 
-  hlight = new THREE.AmbientLight (0x404040,15);
-  //scene.add(hlight);
+  hlight = new THREE.AmbientLight (0x404040,3);
+  scene.add(hlight);
   const pointLight =  new THREE.PointLight( 0xffffff, 2, 1000 );
   // pointLight.position.set( 10, 25, - 40 );
    scene.add( pointLight );
@@ -56,21 +56,21 @@ function init() {
   // scene.add( pointLight );
 
 
-  const pointLight2 =  new THREE.PointLight( 0xffffff, 1, 1000 );
+  const pointLight2 =  new THREE.PointLight( 0xffffff, 2, 1000 );
   pointLight2.position.set( 0, 0, 0 );
   scene.add( pointLight2 );
 
 
-  const pointLight3 =  new THREE.PointLight( 0xffffff, 1, 1000 );
+  const pointLight3 =  new THREE.PointLight( 0xffffff, 2, 1000 );
   pointLight3.position.set( -50,-50,-50 );
   scene.add( pointLight3 );
 
 
-  const pointLight4 =  new THREE.PointLight( 0xffffff, 1, 1000 );
+  const pointLight4 =  new THREE.PointLight( 0xffffff,2, 1000 );
   pointLight4.position.set( 50, 50, -20 );
   scene.add( pointLight4 );
 
-  const pointLight5 =  new THREE.PointLight( 0xffffff,1, 1000 );
+  const pointLight5 =  new THREE.PointLight( 0xffffff,2, 1000 );
   pointLight5.position.set( 20, -20, 20 );
   // pointLight5.position.set(-40, 10, 20 );
   scene.add( pointLight5 );
