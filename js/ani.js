@@ -25,7 +25,7 @@ function init() {
 
 
   scene = new THREE.Scene();
-  // scene.background = new THREE.Color(0x67a6fd);
+  scene.background = new THREE.Color(0x1c1d26);
   
   camera = new THREE.PerspectiveCamera(2,width/height,1,5000);
   //camera.rotation.y = 150;
