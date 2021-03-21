@@ -91,29 +91,53 @@
 					<a href="#two" class="goto-next scrolly">Next</a>
 				</section>
 
-			<!-- Two -->
-				<!-- <section id="two" class="spotlight style2 right">
-					<span class="image fit main">
-						<img src="images/rover.jpeg" alt="" />
-							<div id="c"></div>
-
-					</span>
-
-				
-				
-
+				<section id="two" class="spotlight style1 bottom">
+					<span class="image fit main"><img src="images/moon.jpg" alt="" /></span>
 					<div class="content">
-						<header>
-							<h2>Mechanical Configuration</h2>
-							<p>Our first moon rover </p>
-						</header>
-						<p> In only 50 lts of volume and with 2 kg of mass, we pack all the necesarry technology. </p>
+						<div class="container">
+							<div class="row">
+								<div class="col-4 col-12-medium">
+									<header>
+										<h2>Mission</h2>
+										<span class="image"><img src="images/PARCHE.png" alt="" /></span>
+										<p></p>
+									</header>
+								</div>
+								<div class="col-4 col-12-medium">
+									<ul class="textoJustificado">
+										<li>Characterize the Moon’s regolith, through the analysis of seismological
+											 data and infrared spectrometry.
+										</li>
+
+										<li>To develop an open source framework of a modular rover which works as 
+											baseline for future projects.
+									   </li>
+
+									   <li>To establish the antecedent of an fully autonomous moon rover capable of communicate with other rovers 
+										   conforming a constellation. 
+								   		</li>
+									</ul>
+
+								</div>
+								<div class="col-4 col-12-medium">
+									<ul  class="textoJustificado">
+										<li>
+											To establish the antecedent of a low cost and open source rover capable 
+											of carrying  out its mission after the moon night.
+										</li>
+										<li>
+											Use Deep Learning algorithms in order to predict future moonquakes based 
+											on a free access dataset.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
-				</section> -->
+				</section>
 
-
-				<section id="two" class="model style2 right">
+				<section id="three" class="model style2 right">
 
 					<div id="canvas" class="canvas"></div>
 					<div class="content">
@@ -127,14 +151,14 @@
 							<br>
 							It features 6 sets of flight heritage engines plus planetary gearbox that drive wheels specially designed to navigate unfamiliar terrain.</p>
 					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
+					<a href="#four" class="goto-next scrolly">Next</a>
 				</section>
 
 
 
 
 			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
+				<section id="four" class="spotlight style3 left">
 					<span class="image fit main bottom"><img src="images/power.jpg" alt="" /></span>
 					<div class="content">
 						<header>
@@ -152,33 +176,32 @@
 						<!-- <ul class="actions">
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul> -->
-					<!-- </div>
-					<a href="#four" class="goto-next scrolly">Next</a> -->
+					</div>
+					<a href="#six" class="goto-next scrolly">Next</a>
 				</section>
 
 
-				<section id="two" class="spotlight style2 right">
+				<section id="six" class="spotlight style2 right">
 					<span class="image fit main"><img src="images/lidar.png" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2>Navigation</h2>
 							<p>How does our rover manage to move and locate itself at the same time without teleoperation? </p>
 						</header>
-						<p>Among the wide range of autonomous robot navigation algorithms, we are using a strategy of sensor fusion with 
-							Visual SLAM. Our system is composed of a main stereo camera and a combination of infrared and depth sensors.
-							 In this way, we can detect relevant "features" of the environment and perform a highly accurate localization 
-							 and mapping of the lunar landscape.
-
-							The correct use of SLAM together with planning algorithms will allow our Rover to make autonomous decisions and 
-							decide where it has to move, always making an inference of parameters such as obstacles, valleys and craters. </p>
+						<p>Among the wide range of autonomous robot navigation algorithms, we are using a strategy based on Visual SLAM. Our system is composed
+							 of a main stereo camera in this way, we can detect relevant "features" of the 
+							 environment and perform a highly accurate localization and mapping of the lunar landscape.
+							 <br>
+							  The correct use of SLAM together with planning algorithms will allow our Rover to make autonomous 
+							  decisions and decide where it has to move, always making an inference of parameters such as obstacles, valleys and craters. </p>
 						<ul class="actions">
 						</ul>
 					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
+					<a href="#seven" class="goto-next scrolly">Next</a>
 				</section>
 
 
-				<section id="three" class="spotlight style3 left">
+				<section id="seven" class="spotlight style3 left">
 					<span class="image fit main bottom"><img src="images/comms ingles.png" alt="" /></span>
 					<div class="content">
 						<header>
@@ -194,9 +217,33 @@
 						<ul class="actions">
 							<!-- <li><a href="#" class="button">Learn More</a></li> -->
 						</ul>
-					<!-- </div>
-					<a href="#four" class="goto-next scrolly">Next</a> -->
+					</div>
+					<a href="#ocho" class="goto-next scrolly">Next</a>
 				</section>
+
+
+				<section id="ocho" class="spotlight style2 right">
+					<span class="image fit main"><img src="images/micro.jpeg" alt="" /></span>
+					<div class="content">
+						<header>
+							<h2>Electronics	</h2>
+							<p>How is our rover controlled?</p>
+						</header>
+						<p>
+							The brain of rover is a microcontroller of the family SAMV71, it will control different subsystems like power module, temperature control, communications and data processing.
+							To bring out the processing required for Visual SLAM, we count with a  SBC (Single Board Computer), where the SALM navigation libraries will be running.
+							To achieve an easy implementation of the rover we pretend to use COTS (Commercial Of The Shelf) products, and open source libraries with the objective of reducing development and evaluation times and costs. Avoiding the use of rad-tolerant and rad-hardened components whenever possible, except for those developing a critical mission like the memories and the microcontroller.
+							To achieve a good reliability the rover will have redundant components that start working when a critical component fails.
+							We attempt to make a versatile product, adaptable to different missions with the least effort, and large scale manufacturable.
+							
+
+							
+							</p>
+						</div>
+					<!-- </div>
+					<a href="#three" class="goto-next scrolly">Next</a> -->
+				</section>
+
 			<!-- Four -->
 				<!-- <section id="four" class="wrapper style1 special fade-up">
 					<div class="container">
@@ -267,21 +314,25 @@
 					
 
 			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li> -->
-						<li><a href="https://instagram.com/spacebeetech?igshid=1ctdy4mp243ud" target="blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<!-- <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li> -->
-						<li><a href="mailto: rovertitotherover@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
 
-		</div>
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li> -->
+					<li><a href="https://instagram.com/spacebeetech?igshid=1ctdy4mp243ud" target="blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<!-- <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li> -->
+					<li><a href="mailto: rovertitotherover@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul>Become a <a href="form.html">sponsor!</a></ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			
+			</footer>
+
+	</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
